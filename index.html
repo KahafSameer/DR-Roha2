@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Roha 💖</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music/romantic-lofi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Floating Hearts Container -->
+    <div id="floatingHearts"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hey Roha, this one's just for you…</h1>
+            <p class="hero-subtitle">Every line of code is a love letter to you</p>
+            
+            <!-- Music Control -->
+            <div class="music-control">
+                <button id="musicToggle" class="music-btn">
+                    <i class="fas fa-music"></i>
+                    <span>Play Music</span>
+                </button>
+            </div>
+
+            <!-- Easter Egg Counter -->
+            <div class="easter-egg-trigger">
+                <i class="fas fa-heart heart-icon" id="heartIcon"></i>
+            </div>
+
+            <!-- Floating "I Love You" text -->
+            <div class="floating-love">
+                <span class="love-word" id="love1">Forever</span>
+                <span class="love-word" id="love2">Always</span>
+                <span class="love-word" id="love3">💕</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section id="loveLetter" class="love-letter-section">
+        <div class="letter-container">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <p class="letter-date">January 1st, 2024</p>
+                    <h2 class="letter-title">My Dearest Roha,</h2>
+                </div>
+                <div class="letter-content">
+                    <p>In this universe of code and pixels, I found you - the most beautiful bug I never want to fix.</p>
+                    <p>You compile my thoughts, debug my sadness, and deploy happiness into my heart every single day.</p>
+                    <p>Every commit, every push - they all lead to you. You are my favorite feature, my main branch, my forever merge.</p>
+                    <p class="letter-signature">
+                        With infinite loops of love,<br>
+                        <span class="signature-name">Forever yours 💕</span>
+                    </p>
+                </div>
+                <div class="letter-seal">💌</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poetic Message Section -->
+    <section id="poetry" class="poetry-section">
+        <div class="poetry-container">
+            <h2 class="section-title">Words from my heart to yours</h2>
+            
+            <div class="poetry-card">
+                <p class="poetry-line urdu">
+                    تمہاری مسکراہٹ کو میں نے کوڈ میں لکھا<br>
+                    ہر کمانڈ، ہر لائن، تمہارے نام کا سجدہ<br>
+                    تم میری class ہو، میرا main function
+                </p>
+            </div>
+            
+            <div class="poetry-card">
+                <p class="poetry-line french">
+                    Tu es mon bug préféré<br>
+                    Imprévisible, irrésistible, et parfaitement toi<br>
+                    Je veux compiler ma vie avec toi pour toujours
+                </p>
+            </div>
+            
+            <div class="poetry-card">
+                <p class="poetry-line english">
+                    In a world of infinite possibilities,<br>
+                    You are my favorite variable, my eternal constant<br>
+                    My forever dependency
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section id="countdown" class="countdown-section">
+        <div class="countdown-container">
+            <h2 class="countdown-label">Days since we met…</h2>
+            <div class="countdown-display">
+                <div class="digit-box" id="daysCounter">
+                    <span class="digit" id="digit0">0</span>
+                    <span class="digit" id="digit1">0</span>
+                    <span class="digit" id="digit2">0</span>
+                    <span class="digit" id="digit3">0</span>
+                </div>
+            </div>
+            <p class="countdown-subtitle">And counting… 💕</p>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">Her Smile</h2>
+        <p class="section-subtitle">Every moment captured is a memory cherished</p>
+        
+        <div class="gallery-grid" id="herGallery">
+            <!-- Images will be loaded dynamically -->
+        </div>
+
+        <h2 class="section-title">Us Together</h2>
+        <p class="section-subtitle">Our story in every frame</p>
+        
+        <div class="gallery-grid" id="weGallery">
+            <!-- Images will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Modal for Image Enlargement -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <p class="modal-caption" id="modalCaption"></p>
+        <button class="modal-nav prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="modal-nav next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Easter Egg Surprise Modal -->
+    <div id="easterEggModal" class="easter-egg-modal">
+        <div class="easter-content">
+            <h2>💖 Will you be my forever deploy? 💖</h2>
+            <p>Code never lies, and neither does my heart ❤️</p>
+            <button id="closeEaster" class="close-easter-btn">
+                <i class="fas fa-heart"></i> Yes, always
+            </button>
+        </div>
+    </div>
+
+    <!-- Rose Petals Container -->
+    <div id="rosePetals"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💖 by someone who codes in the language of love</p>
+        <p class="footer-sub">For Roha, always and forever</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
