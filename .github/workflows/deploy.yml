@@ -29,7 +29,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2  # ✅ updated from v1 → v2
         with:
-          path: './'  # or 'roha/' if your index.html is inside that folder
+          path: 'roha/' if your index.html is inside that folder
 
       - name: Deploy to GitHub Pages
         id: deployment
