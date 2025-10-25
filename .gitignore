@@ -2,7 +2,7 @@
 .DS_Store
 Thumbs.db
 desktop.ini
-
+.github/workflows/deploy.yml
 # Editor Files
 .vscode/
 .idea/
